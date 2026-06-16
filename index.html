@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Thanh điều hướng & Nút Dark Mode -->
+    <nav class="navbar">
+        <div class="logo">MyPortfolio</div>
+        <ul class="nav-links">
+            <li><a href="#home">Trang chủ</a></li>
+            <li><a href="#projects">Dự án</a></li>
+            <li><a href="#contact">Liên hệ</a></li>
+        </ul>
+        <button id="theme-toggle" class="btn-toggle">Đổi Chế Độ</button>
+    </nav>
+
+    <!-- Khuvực Giới thiệu -->
+    <section id="home" class="hero section fade-in">
+        <h1>Xin chào, mình là Sinh Viên Van Hien University</h1>
+        <p>Chào mừng bạn đến với trang portfolio chuyên nghiệp của mình.</p>
+    </section>
+
+    <!-- Khuvực Dự án (CSS Grid 6 dự án) -->
+    <section id="projects" class="projects-section section fade-in">
+        <h2>Các Dự Án Của Tôi</h2>
+        <div class="projects-grid">
+            <div class="project-card"><h3>Dự án 1</h3><p>Mô tả ngắn gọn về dự án công nghệ.</p></div>
+            <div class="project-card"><h3>Dự án 2</h3><p>Mô tả ngắn gọn về dự án công nghệ.</p></div>
+            <div class="project-card"><h3>Dự án 3</h3><p>Mô tả ngắn gọn về dự án công nghệ.</p></div>
+            <div class="project-card"><h3>Dự án 4</h3><p>Mô tả ngắn gọn về dự án công nghệ.</p></div>
+            <div class="project-card"><h3>Dự án 5</h3><p>Mô tả ngắn gọn về dự án công nghệ.</p></div>
+            <div class="project-card"><h3>Dự án 6</h3><p>Mô tả ngắn gọn về dự án công nghệ.</p></div>
+        </div>
+    </section>
+
+    <!-- Khuvực Form liên hệ (Gắn Formspree) -->
+    <section id="contact" class="contact-section section fade-in">
+        <h2>Liên Hệ Với Tôi</h2>
+        <!-- BẠN THAY {your_id} THÀNH ID FORMSPREE CỦA BẠN NHÉ -->
+        <form action="https://formspree.io/f/xoqgnpze" method="POST" class="contact-form">
+            <input type="email" name="email" placeholder="Email của bạn" required>
+            <textarea name="message" placeholder="Tin nhắn của bạn" rows="5" required></textarea>
+            <button type="submit" class="btn-submit">Gửi tin nhắn</button>
+        </form>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
