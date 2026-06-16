@@ -1,0 +1,99 @@
+/* Thiết lập cơ bản & Biến màu sắc */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --card-bg: #f4f4f4;
+    --primary-color: #0070f3;
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --card-bg: #1e1e1e;
+    --primary-color: #ff4081;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: var(--card-bg);
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+/* Mobile First - Thiết kế mặc định cho màn hình nhỏ */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 cột trên điện thoại */
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+.btn-submit, .btn-toggle {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Responsive - Màn hình máy tính lớn hơn */
+@media (min-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 cột (tổng cộng 6 dự án hiện đẹp mắt) */
+    }
+}
+
+/* Hiệu ứng ẩn để cuộn hiện lên */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
